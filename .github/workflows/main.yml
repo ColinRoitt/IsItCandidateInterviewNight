@@ -36,10 +36,10 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ${{ secrets.FTP_SERVER }}
+        ftp-server: ${{ secrets.FTP_SERVER }}/public_html/
         # FTP account username
         ftp-username: ${{ secrets.FTP_USER }}
         # FTP account password
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         # The local folder to copy, defaults to root project folder
-        local-dir: ./ # This folder is NOT going to upload by default unless you add it to .git-ftp-include:  
+        local-dir: ./
