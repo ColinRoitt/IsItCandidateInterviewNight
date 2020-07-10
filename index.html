@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- No-one knows how time works in URY. We need this to tell us when our biggest event is. It's our only hope.-->    
-    
+<!-- No-one knows how time works in URY. We need this to tell us when our biggest event is. It's our only hope.-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,29 +33,29 @@
 <body>
     <span>
         <marquee>
-        <h1>no</h1>
+            <h1>no</h1>
         </marquee>
     </span>
 
-<script>
-    const isToday = () => {
-        // 12 feb 2020
-        console.log(1)
-        someDate = new Date('2020-02-12')
-        let today = new Date();
-        today = someDate.getDate() == today.getDate() &&
-            someDate.getMonth() == today.getMonth() &&
-            someDate.getFullYear() == today.getFullYear();
-        if (today) {
-            document.querySelector("h1").innerHTML = 'yes! <br/> go to <a href="http://ury.org.uk/cin"> URY.org.uk/cin </a> to watch LIVE at 7pm TODAY'
+    <script>
+        const isToday = () => {
+            // 12 feb 2020
+            console.log('The Letter L');
+            someDate = new Date('2020-02-12')
+            let today = new Date();
+            today = someDate.getDate() == today.getDate() &&
+                someDate.getMonth() == today.getMonth() &&
+                someDate.getFullYear() == today.getFullYear();
+            if (today) {
+                document.querySelector("h1").innerHTML = 'yes! <br/> go to <a href="http://ury.org.uk/cin"> URY.org.uk/cin </a> to watch LIVE at 7pm TODAY'
+            }
+
+            setTimeout(isToday, 1000);
         }
 
-        setTimeout(isToday, 1000);
-    }
+        isToday();
 
-    isToday();
-
-</script>
+    </script>
 
 </body>
 
