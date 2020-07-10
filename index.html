@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Free_VBucks.mp3.exe</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            display: table;
+            width: 100%;
+        }
+
+        body>span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            font-family: 'Varela Round', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        <h1>no</h1>
+    </span>
+</body>
+
+</html>
+<script>
+    const isToday = () => {
+        // 12 feb 2020
+        console.log(1)
+        someDate = new Date('2020-02-12')
+        let today = new Date();
+        today = someDate.getDate() == today.getDate() &&
+            someDate.getMonth() == today.getMonth() &&
+            someDate.getFullYear() == today.getFullYear();
+        if (today) {
+            document.querySelector("h1").innerHTML = 'yes! <br/> go to <a href="http://ury.org.uk/cin"> URY.org.uk/cin </a> to watch LIVE at 7pm TODAY'
+        }
+
+        setTimeout(isToday, 1000);
+    }
+
+    isToday();
+
+</script>
