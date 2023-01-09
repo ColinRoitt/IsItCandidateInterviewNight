@@ -41,13 +41,13 @@
         const isToday = () => {
             // 2nd March 2021
             console.log('The Letter L');
-            someDate = new Date('2022-02-17')
+            someDate = new Date('2023-02-16')
             let today = new Date();
             today = someDate.getDate() == today.getDate() &&
                 someDate.getMonth() == today.getMonth() &&
                 someDate.getFullYear() == today.getFullYear();
             if (today) {
-                document.querySelector("h1").innerHTML = 'yes! <br/> go to <a href="http://ury.org.uk/cin"> URY.org.uk/cin </a> to watch LIVE at 6pm TODAY'
+                document.querySelector("h1").innerHTML = 'yes! <br/> go to <a href="http://ury.org.uk/cin"> URY.org.uk/cin </a> to watch LIVE at 7pm TODAY'
             }
 
             setTimeout(isToday, 1000);
