@@ -24,10 +24,10 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ${{ secrets.FTP_SERVER }}/
+        server: ${{ secrets.FTP_SERVER }}/
         # FTP account username
-        ftp-username: ${{ secrets.FTP_USER }}
+        username: ${{ secrets.FTP_USER }}
         # FTP account password
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        password: ${{ secrets.FTP_PASSWORD }}
         # The local folder to copy, defaults to root project folder
         local-dir: ./
