@@ -1,33 +1,21 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+name: 🚀 Deploy website on push
 jobs:
-  # This workflow contains a single job called "build"
-  deploy:
-    # The type of runner that the job will run on
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
-        
-    - name: 🚀 FTP Deploy
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
         server: ${{ secrets.FTP_SERVER }}/
-        # FTP account username
         username: ${{ secrets.FTP_USER }}
-        # FTP account password
         password: ${{ secrets.FTP_PASSWORD }}
-        # The local folder to copy, defaults to root project folder
-        local-dir: ./
+        exclude: |
+          **/.git*
+          **/.git*/**
